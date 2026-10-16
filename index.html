@@ -9,16 +9,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg: #FBF6F9;
+      /* Paleta verde floresta: variações escuras e claras */
+      --bg: #F5F8F5; /* fundo muito claro com leve tom verde */
       --surface: #FFFFFF;
-      --ink: #2A1738;
-      --muted: #6B5876;
+      --ink: #10221A; /* texto principal: verde muito escuro quase preto */
+      --muted: #5B766A; /* tom mais suave para textos secundários */
 
-      /* Verde floresta escuro */
-      --accent: #0B6623;
+      --accent-dark: #083922; /* verde floresta bem escuro */
+      --accent: #0B4D2E; /* verde floresta principal */
+      --accent-light: #2A7A52; /* variante mais clara */
       --accent-ink: #FFFFFF;
-      --gold: #E8B04B;
-      --line: #E9DCE5;
+      --gold: #D4A55A; /* destaque quente (mantido como contraste) */
+      --line: #E6EFE8; /* linhas suaves com tom esverdeado claro */
 
       box-sizing: border-box;
       padding-top: env(safe-area-inset-top,0px);
@@ -28,24 +30,28 @@
     @media (prefers-color-scheme: dark){
       :root:not([data-theme="light"]){
         color-scheme: dark;
-        --bg: #1B0F25;
-        --surface: #28183A;
-        --ink: #F6ECF3;
-        --muted: #BBA6C6;
-        --accent: #1E5F3B;
-        --accent-ink: #1B0F25;
-        --line: #3D2A50;
+        --bg: #07160F; /* fundo escuro com tom verde muito profundo */
+        --surface: #0F291E;
+        --ink: #E8F6F0; /* texto claro */
+        --muted: #98B3A6; /* tom claro e dessaturado para secundários */
+        --accent-dark: #062B1C;
+        --accent: #0F4A2B;
+        --accent-light: #236B45;
+        --accent-ink: #07160F;
+        --line: #163926;
       }
     }
     :root[data-theme="dark"]{
       color-scheme: dark;
-      --bg: #1B0F25;
-      --surface: #28183A;
-      --ink: #F6ECF3;
-      --muted: #BBA6C6;
-      --accent: #1E5F3B;
-      --accent-ink: #1B0F25;
-      --line: #3D2A50;
+      --bg: #07160F;
+      --surface: #0F291E;
+      --ink: #E8F6F0;
+      --muted: #98B3A6;
+      --accent-dark: #062B1C;
+      --accent: #0F4A2B;
+      --accent-light: #236B45;
+      --accent-ink: #07160F;
+      --line: #163926;
     }
 
     *,*::before,*::after{box-sizing:inherit}
