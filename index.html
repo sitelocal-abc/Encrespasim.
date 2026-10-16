@@ -1,153 +1,228 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ENCRESPASIM | Salão para cabelos cacheados e crespos</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#FBF6F9; --surface:#FFFFFF; --ink:#2A1738; --muted:#6B5876;
-  --accent:#C2307A; --accent-ink:#FFFFFF; --gold:#E8B04B; --line:#E9DCE5;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    color-scheme:dark;
-    --bg:#1B0F25; --surface:#28183A; --ink:#F6ECF3; --muted:#BBA6C6;
-    --accent:#E0529A; --accent-ink:#1B0F25; --line:#3D2A50;
-  }
-}
-:root[data-theme="dark"]{
-  color-scheme:dark;
-  --bg:#1B0F25; --surface:#28183A; --ink:#F6ECF3; --muted:#BBA6C6;
-  --accent:#E0529A; --accent-ink:#1B0F25; --line:#3D2A50;
-}
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;line-height:1.6;font-size:17px}
-h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.1;margin:0}
-.wrap{max-width:640px;margin:0 auto;padding:0 22px}
-section{padding:52px 0}
-h2{font-size:30px;font-weight:800;margin-bottom:18px}
-p{margin:0 0 14px}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ENCRESPASIM | Salão para cabelos cacheados e crespos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #FBF6F9;
+      --surface: #FFFFFF;
+      --ink: #2A1738;
+      --muted: #6B5876;
 
-.hero{padding:44px 0 40px;position:relative;overflow:hidden}
-.brand{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:20px;letter-spacing:.02em;margin-bottom:34px}
-.hero h1{font-size:clamp(40px,11vw,64px);font-weight:800;margin-bottom:18px}
-.hero p.lead{font-size:19px;color:var(--muted);max-width:30em}
-.curl{position:absolute;right:-6px;top:-4px;width:84px;opacity:.9;pointer-events:none}
-.curl path{stroke:var(--accent)}
-.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none;padding:15px 26px;border-radius:999px;margin-top:10px;font-size:17px}
-.btn:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-.rating{margin-top:22px;font-size:15px;color:var(--muted)}
-.rating b{color:var(--ink);font-size:18px}
+      /* Verde floresta escuro */
+      --accent: #0B6623;
+      --accent-ink: #FFFFFF;
+      --gold: #E8B04B;
+      --line: #E9DCE5;
 
-.alt{background:var(--surface);border-block:1px solid var(--line)}
-.list{list-style:none;padding:0;margin:0}
-.list li{padding:16px 0;border-bottom:1px solid var(--line)}
-.list li:last-child{border-bottom:0}
-.list strong{display:block;font-size:18px}
-.list span{color:var(--muted);font-size:16px}
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top,0px);
+      padding-bottom: env(safe-area-inset-bottom,0px);
+    }
 
-.quote{border-left:4px solid var(--gold);padding:4px 0 4px 16px;margin:0 0 20px;color:var(--muted)}
-.quote small{display:block;margin-top:6px;color:var(--ink);font-weight:700}
+    @media (prefers-color-scheme: dark){
+      :root:not([data-theme="light"]){
+        color-scheme: dark;
+        --bg: #1B0F25;
+        --surface: #28183A;
+        --ink: #F6ECF3;
+        --muted: #BBA6C6;
+        --accent: #1E5F3B;
+        --accent-ink: #1B0F25;
+        --line: #3D2A50;
+      }
+    }
+    :root[data-theme="dark"]{
+      color-scheme: dark;
+      --bg: #1B0F25;
+      --surface: #28183A;
+      --ink: #F6ECF3;
+      --muted: #BBA6C6;
+      --accent: #1E5F3B;
+      --accent-ink: #1B0F25;
+      --line: #3D2A50;
+    }
 
-.cap{grid-column:1/-1;margin:0;font-weight:700;font-size:15px}
-.ba{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:-6px 0 30px}
-.ph{aspect-ratio:4/5;border:2px dashed var(--line);border-radius:12px;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;color:var(--muted);font-size:14px}
-.info dt{font-weight:700;margin-top:14px}
-.info dd{margin:2px 0 0;color:var(--muted)}
-.final{text-align:left}
-footer{padding:26px 0 90px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+    *,*::before,*::after{box-sizing:inherit}
+    html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:"DM Sans",system-ui,sans-serif;
+      line-height:1.6;
+      font-size:17px;
+      overflow-x:hidden;
+    }
+    h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.1;margin:0}
+    .wrap{max-width:640px;margin:0 auto;padding:0 22px}
+    section{padding:52px 0}
+    h2{font-size:30px;font-weight:800;margin-bottom:18px}
+    p{margin:0 0 14px}
 
-.btns{display:flex;flex-wrap:wrap;gap:0 12px}
-.float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;padding:14px 20px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
-html{-webkit-text-size-adjust:100%}
-body{overflow-x:hidden}
-@media (max-width:480px){
-  body{font-size:16px}
-  .wrap{padding:0 18px}
-  section{padding:40px 0}
-  h2{font-size:26px}
-  .hero{padding:28px 0 32px}
-  .brand{margin-bottom:26px}
-  .hero h1{font-size:38px}
-  .hero p.lead{font-size:17px}
-  .btns{flex-direction:column;gap:0}
-  .btn{display:block;text-align:center;width:100%}
-  .float{padding:12px 16px;font-size:15px}
-}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+    .hero{padding:44px 0 40px;position:relative;overflow:hidden}
+    .brand{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:20px;letter-spacing:.02em;margin-bottom:34px}
+    .hero h1{font-size:clamp(40px,11vw,64px);font-weight:800;margin-bottom:18px}
+    .hero p.lead{font-size:19px;color:var(--muted);max-width:30em}
+    .curl{position:absolute;right:-6px;top:-4px;width:84px;opacity:.9;pointer-events:none}
+    .curl path{stroke:var(--accent)}
+    .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none;padding:15px 26px;border-radius:999px;margin-top:10px;font-size:17px}
+    .btn:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+    .rating{margin-top:22px;font-size:15px;color:var(--muted)}
+    .rating b{color:var(--ink);font-size:18px}
+
+    .alt{background:var(--surface);border-block:1px solid var(--line)}
+    .list{list-style:none;padding:0;margin:0}
+    .list li{padding:16px 0;border-bottom:1px solid var(--line)}
+    .list li:last-child{border-bottom:0}
+    .list strong{display:block;font-size:18px}
+    .list span{color:var(--muted);font-size:16px}
+
+    .quote{border-left:4px solid var(--gold);padding:8px 0 8px 16px;margin:0 0 20px;color:var(--muted)}
+    .quote small{display:block;margin-top:6px;color:var(--ink);font-weight:700}
+
+    .cap{grid-column:1/-1;margin:0;font-weight:700;font-size:15px}
+    .ba{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:-6px 0 30px}
+    .ph{aspect-ratio:4/5;border:2px dashed var(--line);border-radius:12px;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;color:var(--muted);font-size:14px}
+    .info dt{font-weight:700;margin-top:14px}
+    .info dd{margin:2px 0 0;color:var(--muted)}
+    .final{text-align:left}
+    footer{padding:26px 0 90px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+
+    .btns{display:flex;flex-wrap:wrap;gap:0 12px}
+
+    /* botão flutuante */
+    .float{
+      position:fixed;
+      right:16px;
+      bottom:calc(16px + env(safe-area-inset-bottom,0px));
+      background:var(--accent);
+      color:var(--accent-ink);
+      text-decoration:none;
+      font-weight:700;
+      padding:14px 20px;
+      border-radius:999px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.12);
+      z-index:60;
+    }
+    .float:focus{outline:3px solid var(--gold);outline-offset:3px}
+
+    html{-webkit-text-size-adjust:100%}
+
+    @media (max-width:480px){
+      body{font-size:16px}
+      .wrap{padding:0 18px}
+      section{padding:40px 0}
+      h2{font-size:26px}
+      .hero{padding:28px 0 32px}
+      .brand{margin-bottom:26px}
+      .hero h1{font-size:38px}
+      .hero p.lead{font-size:17px}
+      .btns{flex-direction:column;gap:0}
+      .btn{display:block;text-align:center;width:100%}
+      .float{padding:12px 16px;font-size:15px}
+    }
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
 </head>
 <body>
 
-<header class="hero">
-  <svg class="curl" viewBox="0 0 120 200" fill="none" aria-hidden="true">
-    <path d="M60 4c40 0 52 36 30 52S30 70 36 94s54 22 52 48-34 42-54 36" stroke-width="7" stroke-linecap="round"/>
-  </svg>
-  <div class="wrap">
-    <div class="brand">ENCRESPASIM</div>
-    <h1>Seus cachos, cuidados como eles merecem.</h1>
-    <p class="lead">Salão especializado em cabelos cacheados e crespos.</p>
-    <a class="btn" href="https://wa.me/5511970404752?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio">Agendar pelo WhatsApp</a>
-  </div>
-</header>
+  <header class="hero" role="banner">
+    <svg class="curl" viewBox="0 0 120 200" fill="none" aria-hidden="true" width="84" height="140" focusable="false">
+      <path d="M60 4c40 0 52 36 30 52S30 70 36 94s54 22 52 48-34 42-54 36" stroke="var(--accent)" stroke-width="7" stroke-linecap="round"/>
+    </svg>
 
-<section class="alt" id="servicos">
-  <div class="wrap">
-    <h2>O que fazemos pelos seus cachos</h2>
-    <ul class="list">
-      <li><strong>Avaliação do seu cabelo</strong><span>Entendemos o seu tipo de curvatura antes de qualquer procedimento.</span></li>
-      <li><strong>Protocolo naturalista</strong><span>Tratamento em sessões, respeitando a saúde e a textura dos fios.</span></li>
-      <li><strong>Corte para cachos</strong><span>Feito para valorizar o formato natural do seu cabelo.</span></li>
-      <li><strong>Hidratação e nutrição</strong><span>Cuidado que devolve definição, brilho e maciez.</span></li>
-      <li><strong>Finalização</strong><span>Cachos definidos e com volume para o seu dia a dia.</span></li>
-    </ul>
-  </div>
-</section>
-
-<section id="clientes">
-  <div class="wrap">
-    <h2>Avaliações das clientes</h2>
-    <p class="rating" style="margin:0 0 22px"><b>5,0</b> de nota no Google, com 51 avaliações</p>
-    <blockquote class="quote">Tinha muita dificuldade com o meu cabelo, ele é crespo e estava muito ressecado e não formava cachos. A Nath me propôs o protocolo naturalista, o meu cabelo deu um mega resultado logo na primeira sessão.<small>Cliente, avaliação no Google</small></blockquote>
-    <div class="ba"><p class="cap">Cabelo crespo</p><div class="ph">Foto do antes</div><div class="ph">Foto do depois</div></div>
-    <blockquote class="quote">Profissionais excelentes! Trabalho muito bem feito pela Nathalia e Ingrid, indico a todas as cacheadas, crespas e onduladas.<small>Cliente, avaliação no Google</small></blockquote>
-    <div class="ba"><p class="cap">Cabelo cacheado</p><div class="ph">Foto do antes</div><div class="ph">Foto do depois</div></div>
-    <blockquote class="quote">Já estou com elas há pelo menos dois anos e foi a melhor coisa que aconteceu para o meu cabelo!<small>Cliente, avaliação no Google</small></blockquote>
-    <div class="ba"><p class="cap">Cabelo ondulado</p><div class="ph">Foto do antes</div><div class="ph">Foto do depois</div></div>
-  </div>
-</section>
-
-<section class="alt" id="onde">
-  <div class="wrap">
-    <h2>Onde estamos</h2>
-    <dl class="info">
-      <dt>Endereço</dt><dd>Av. Atlântica, 359, Vila Valparaíso, Santo André - SP</dd>
-      <dt>Horário</dt><dd>Terça a sábado, das 9h às 16h</dd>
-    </dl>
-    <div class="ph" style="aspect-ratio:16/9;margin-top:20px">Foto do salão</div>
-  </div>
-</section>
-
-<section class="final">
-  <div class="wrap">
-    <h2>Vamos cuidar dos seus cachos?</h2>
-    <p>Chame no WhatsApp e escolha o melhor horário para você.</p>
-    <div class="btns">
-      <a class="btn" href="https://wa.me/5511970404752?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio">Agendar pelo WhatsApp</a>
-      <a class="btn" href="https://www.instagram.com/">Seguir no Instagram</a>
+    <div class="wrap">
+      <div class="brand">ENCRESPASIM</div>
+      <h1>Seus cachos, cuidados como eles merecem.</h1>
+      <p class="lead">Salão especializado em cabelos cacheados e crespos — tratamentos personalizados para cada tipo de fio.</p>
+      <a class="btn" href="https://wa.me/5511970404752?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio" aria-label="Agendar pelo WhatsApp">Agendar pelo WhatsApp</a>
+      <p class="rating" style="margin-top:18px">Atendimento com protocolos que respeitam saúde e definição dos fios.</p>
     </div>
-  </div>
-</section>
+  </header>
 
-<footer><div class="wrap">Prévia de proposta de site para o ENCRESPASIM.</div></footer>
+  <section class="alt" id="servicos">
+    <div class="wrap">
+      <h2>O que fazemos pelos seus cachos</h2>
+      <ul class="list">
+        <li><strong>Avaliação do seu cabelo</strong><span>Entendemos o seu tipo de curvatura antes de qualquer procedimento.</span></li>
+        <li><strong>Protocolo naturalista</strong><span>Tratamento em sessões, respeitando a saúde e a textura dos fios.</span></li>
+        <li><strong>Corte para cachos</strong><span>Feito para valorizar o formato natural do seu cabelo.</span></li>
+        <li><strong>Hidratação e nutrição</strong><span>Cuidado que devolve definição, brilho e maciez.</span></li>
+        <li><strong>Finalização</strong><span>Cachos definidos e com volume para o seu dia a dia.</span></li>
+      </ul>
+    </div>
+  </section>
 
-<a class="float" href="https://wa.me/5511970404752?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio">WhatsApp</a>
+  <section id="clientes">
+    <div class="wrap">
+      <h2>Avaliações das clientes</h2>
+      <p class="rating" style="margin:0 0 22px"><b>5,0</b> de nota no Google, com 51 avaliações</p>
+
+      <blockquote class="quote">
+        Tinha muita dificuldade com o meu cabelo, ele é crespo e estava muito ressecado. A Nath me propôs o protocolo naturalista e meu cabelo melhorou muito.
+        <small>— Cliente, avaliação no Google</small>
+      </blockquote>
+
+      <div class="ba">
+        <p class="cap">Cabelo crespo</p>
+        <div class="ph">Foto do antes</div>
+        <div class="ph">Foto do depois</div>
+      </div>
+
+      <blockquote class="quote">
+        Profissionais excelentes! Trabalho muito bem feito pela Nathalia e Ingrid, indico a todas as cacheadas, crespas e onduladas.
+        <small>— Cliente, avaliação no Google</small>
+      </blockquote>
+
+      <div class="ba">
+        <p class="cap">Cabelo cacheado</p>
+        <div class="ph">Foto do antes</div>
+        <div class="ph">Foto do depois</div>
+      </div>
+
+      <blockquote class="quote">
+        Já estou com elas há pelo menos dois anos e foi a melhor coisa que aconteceu para o meu cabelo!
+        <small>— Cliente, avaliação no Google</small>
+      </blockquote>
+
+      <div class="ba">
+        <p class="cap">Cabelo ondulado</p>
+        <div class="ph">Foto do antes</div>
+        <div class="ph">Foto do depois</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="onde">
+    <div class="wrap">
+      <h2>Onde estamos</h2>
+      <dl class="info">
+        <dt>Endereço</dt><dd>Av. Atlântica, 359, Vila Valparaíso, Santo André - SP</dd>
+        <dt>Horário</dt><dd>Terça a sábado, das 9h às 16h</dd>
+      </dl>
+      <div class="ph" style="aspect-ratio:16/9;margin-top:20px">Foto do salão</div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <h2>Vamos cuidar dos seus cachos?</h2>
+      <p>Chame no WhatsApp e escolha o melhor horário para você.</p>
+      <div class="btns" style="margin-top:12px">
+        <a class="btn" href="https://wa.me/5511970404752?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio">Agendar pelo WhatsApp</a>
+        <a class="btn" href="https://www.instagram.com/" style="background:transparent;color:var(--accent);border:2px solid var(--accent);">Seguir no Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="wrap">Prévia de proposta de site para o ENCRESPASIM.</div></footer>
+
+  <a class="float" href="https://wa.me/5511970404752?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio" aria-label="Abrir WhatsApp">WhatsApp</a>
 </body>
 </html>
